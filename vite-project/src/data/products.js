@@ -80,5 +80,5 @@ export function getProducts() {// this return the products w a3mlha call b2a fy 
 }
 
 export function getProductById(id) {
-  return products.find((p) => p.id === Number(id));
+  return products.find((p) => p.id === Number(id));//el id el bytgab mn el URL da string msh hyb2a number fa mhman a3ml comparison hatb2a false
 }

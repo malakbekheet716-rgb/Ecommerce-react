@@ -1,5 +1,5 @@
-import {getProducts} from "../data/products";
-import {Link} from "react-router-dom";
+import ProductCard from "../components/ProductCard";
+import { getProducts } from "../data/products";
 
 export default function Home(){
     const products = getProducts();//accessing it
@@ -13,10 +13,10 @@ export default function Home(){
         </div>
         <div className="container">
             <h2 className="page=-title">Our Products</h2>
-            <div className="product-grid">
+            <div className="product-grid">{/*goes through the array one item at a time. */}
                 {products.map((product) =>(
-                    <ProductCard product={product} key={product.id} />
-                ))}
+                    <ProductCard product={product} key={product.id} /> //creates your ProductCard component for each product.
+                ))} {/*product dy el prop w el maben {} dy ely el map lesa gybah */}
             </div>
         </div>
        </div>
